@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- Mysql, sql구문이 있는 걸 mapper파일이라 함
+	 주소는 마음대로 지정 -->
+<mapper namespace="com.itwillbs.mappers.memberMapper">
+<!-- sql 넣을 것! -->
+
+<!--<insert id="sql구문이름"> -->
+<!-- value(DTO 멤버변수) -->
+	<insert id="insertMember">
+		INSERT INTO MEMBERS(
+					ID, 
+					PASS, 
+					NAME, 
+					DATE	) 
+			VALUES(
+			  		#{id},
+			  		#{pass},
+			  		#{name},
+			  		#{date}
+			  		)
+			
+	</insert>
+	
+	<select id="userCheck" resultType="com.itwillbs.domain.MemberDTO">
+		SELECT * 
+		  FROM MEMBERS
+		 WHERE ID=#{id}
+		   AND PASS=#{pass}
+	</select>
+
+	<select id="getMember" resultType="com.itwillbs.domain.MemberDTO">
+		SELECT * 
+		  FROM MEMBERS
+		 WHERE ID=#{id}
+	</select>
+
+</mapper>
