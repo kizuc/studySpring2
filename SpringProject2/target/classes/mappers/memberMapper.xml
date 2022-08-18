@@ -10,48 +10,27 @@
 <!--<insert id="sql구문이름"> -->
 <!-- value(DTO 멤버변수) -->
 	<insert id="insertMember">
-		INSERT INTO MEMBERS(
-					ID, 
-					PASS, 
-					NAME, 
-					DATE	) 
-			VALUES(
-			  		#{id},
-			  		#{pass},
-			  		#{name},
-			  		#{date}
-			  		)
-			
+		insert into members(id,pass,name,date) values(#{id},#{pass},#{name},#{date})
 	</insert>
-	
+
 	<select id="userCheck" resultType="com.itwillbs.domain.MemberDTO">
-		SELECT * 
-		  FROM MEMBERS
-		 WHERE ID=#{id}
-		   AND PASS=#{pass}
-	</select>
-
-	<select id="getMember" resultType="com.itwillbs.domain.MemberDTO">
-		SELECT * 
-		  FROM MEMBERS
-		 WHERE ID=#{id}
+		select * from members where id=#{id} and pass=#{pass}
 	</select>
 	
-<!-- value(DTO 멤버변수) -->	
-		<update id="updateMember">
-		  UPDATE MEMBERS 
-			 SET NAME=#{name}
-		   WHERE id=#{id}
-			
+	<select id="getMember" resultType="com.itwillbs.domain.MemberDTO">
+		select * from members where id=#{id}
+	</select>
+	
+	<update id="updateMember">
+		update members set name=#{name} where id=#{id}
 	</update>
-
+	
 	<delete id="deleteMember">
-		DELETE FROM MEMBERS
-		 WHERE id=#{id}
-			
+		delete from members where id=#{id}
 	</delete>
 	
 	<select id="getMemberList" resultType="com.itwillbs.domain.MemberDTO">
 		select * from members
 	</select>
+	
 </mapper>

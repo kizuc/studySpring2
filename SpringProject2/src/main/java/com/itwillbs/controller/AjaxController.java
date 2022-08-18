@@ -21,7 +21,7 @@ public class AjaxController {
 	private MemberService memberService;
 	
 	// /myweb2/member/iddup
-	@RequestMapping(value="/member/iddup", method= RequestMethod.GET)
+	@RequestMapping(value = "/member/iddup", method = RequestMethod.GET)
 //	주소값이 아닌 출력값 담은 걸 리턴하겠다(데이터를 담아서 리턴한다), httpSR=아이디값
 	public ResponseEntity<String> iddup(HttpServletRequest request) {
 		String id=request.getParameter("id");
@@ -30,9 +30,9 @@ public class AjaxController {
 		
 		String result="";
 		if(memberDTO!=null) {
-			// 아이디 있음, 아이디 중복
+			// 아이디 있음 , 아이디 중복
 			result="iddup";
-		} else {
+		}else {
 			// 아이디 없음, 아이디 사용가능
 			result="idok";
 		}
