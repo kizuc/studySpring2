@@ -60,6 +60,13 @@
     <artifactId>mybatis-spring</artifactId>
     <version>1.2.2</version>
 </dependency>
+	<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind 
+		리스트를 json 형태로 뿌려주는 jackson-->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.5.4</version>
+</dependency>
 			
 				
 		<!-- AspectJ -->

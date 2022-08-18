@@ -36,5 +36,22 @@
 		  FROM MEMBERS
 		 WHERE ID=#{id}
 	</select>
+	
+<!-- value(DTO 멤버변수) -->	
+		<update id="updateMember">
+		  UPDATE MEMBERS 
+			 SET NAME=#{name}
+		   WHERE id=#{id}
+			
+	</update>
 
+	<delete id="deleteMember">
+		DELETE FROM MEMBERS
+		 WHERE id=#{id}
+			
+	</delete>
+	
+	<select id="getMemberList" resultType="com.itwillbs.domain.MemberDTO">
+		select * from members
+	</select>
 </mapper>
