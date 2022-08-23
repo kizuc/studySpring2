@@ -16,21 +16,25 @@
 	<select id="userCheck" resultType="com.itwillbs.domain.MemberDTO">
 		select * from members where id=#{id} and pass=#{pass}
 	</select>
-	
+
 	<select id="getMember" resultType="com.itwillbs.domain.MemberDTO">
 		select * from members where id=#{id}
 	</select>
-	
+
 	<update id="updateMember">
 		update members set name=#{name} where id=#{id}
 	</update>
-	
+
 	<delete id="deleteMember">
 		delete from members where id=#{id}
 	</delete>
-	
+
 	<select id="getMemberList" resultType="com.itwillbs.domain.MemberDTO">
 		select * from members
 	</select>
-	
+
+	<select id="getBoardCount" resultType="java.lang.Integer">
+		select count(*) from board
+	</select>
+
 </mapper>

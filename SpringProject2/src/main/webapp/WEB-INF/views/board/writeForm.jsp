@@ -7,7 +7,7 @@
 <title>board/writeForm.jsp</title>
 </head>
 <body>
-<form action="<%=request.getContextPath() %>/board/writePro" method="post">
+<form action="${pageContext.request.contextPath }/board/writePro" method="post">
 <table border="1">
 <tr><td>글쓴이</td><td><input type="text" name="name"></td></tr>
 <tr><td>비밀번호</td><td><input type="password" name="pass"></td></tr>
