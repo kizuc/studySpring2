@@ -13,4 +13,10 @@ public interface BoardService {
 
 	int getBoardCount();
 
+	BoardDTO getBoard(int num);
+
+	BoardDTO numCheck(BoardDTO boardDTO);
+
+	void updateBoard(BoardDTO boardDTO);
+
 }

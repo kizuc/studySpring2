@@ -39,5 +39,23 @@ public class BoardDAOImpl implements BoardDAO{
 		return sqlSession.selectOne(namespace+".getBoardCount");
 	}
 
+	@Override
+	public BoardDTO getBoard(int num) {
+		return sqlSession.selectOne(namespace+".getBoard", num);
+	}
+
+
+	@Override
+	public BoardDTO numCheck(BoardDTO boardDTO) {
+		return sqlSession.selectOne(namespace+".numCheck", boardDTO);
+	}
+
+	@Override
+	public void updateBoard(BoardDTO boardDTO) {
+		return sqlSession.selectOne(namespace+".updateBoard", boardDTO);
+
+	}
+
+
 
 }

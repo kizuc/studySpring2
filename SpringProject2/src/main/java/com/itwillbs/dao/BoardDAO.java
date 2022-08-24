@@ -15,4 +15,12 @@ public interface BoardDAO {
 
 	int getBoardCount();
 
+	BoardDTO getBoard(int num);
+
+	BoardDTO getBoard();
+
+	BoardDTO numCheck(BoardDTO boardDTO);
+
+	void updateBoard(BoardDTO boardDTO);
+
 }
