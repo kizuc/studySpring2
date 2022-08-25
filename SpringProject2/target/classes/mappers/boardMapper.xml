@@ -30,7 +30,7 @@
 		select * from board where num=#{num} and pass=#{pass}
 	</select>
 
-	<select id="numCheck" resultType="com.itwillbs.domain.BoardDTO">
+	<select id="updateBoard" resultType="com.itwillbs.domain.BoardDTO">
 		update board set subject=#{subject}, content=#{content} where num=#{num}
 	</select>
 
